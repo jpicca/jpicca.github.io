@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../Resources/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="../Resources/style.css">
+<title>Latitudinal Weather</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="../index.html">Latitudinal Weather</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../comparison.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="../data.html">Data</a>
+              </li>
+            </ul>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button type="button" class="btn dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="">
+                <a class="dropdown-item" href="../visualizations/temp.html">Max Temp</a>
+                <a class="dropdown-item" href="../visualizations/hum.html">Humidity</a>
+                <a class="dropdown-item" href="../visualizations/clouds.html">Cloudiness</a>
+                <a class="dropdown-item" href="../visualizations/wind.html">Wind Speed</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class='container-fluid front-page'>
+        <div class='col-md-8 mt-5' style="float: left">
+          <h2 class="display-4">Max Temperature</h2>
+          <hr class="my-4">
+          <img class='col-12 float-left' src='../assets/Fig1.png' alt='Visualization of Temperature versus Latitude'>
+          <p class="lead">
+              Out of all the variables analyzed, max temperature is the only one to exhibit a strong sensitivity to latitude. This isn't terribly surprising, since we expect conditions to cool as we approach the poles. Still, there are a few interesting notes.
+          </p>
+          <p class="lead">
+            The southern hemisphere does not exhibit the same magnitude of correlation as the northern hemisphere does. I believe this is partially due to our analysis being performed in the northern hemisphere's winter (and southern's summer). Temperature gradients tend to be maximized in the winter; thus, we should see a stronger correlation in winter than we do in summer.
+          </p>
+          <p class="lead">
+            Additionally, deeper latitudes of the southern hemisphere are characterized by simply more ocean than are equivalent latitudes of the northern hemisphere. In turn, there are fewer cities closer to the poles in the southern hemisphere, causing us to lose data points that may help boost our correlation.
+          </p>
+        </div>
+
+        <div class='col-md-4 mt-5 viz-grid' style="float: right">
+          <h3 class="display-5">Visualizations</h3>
+          <hr class="my-4">
+          <!--<a href='./plots/temp.html'>
+            <img class='col-md-6 col-sm-3 float-left' src='./visualizations/Fig1.png' alt='Visualization of Temperature versus Latitude'>
+          </a>
+          <img class='col-md-6 col-sm-3 float-right' src='./visualizations/Fig2.png' alt='Visualization of Humidity versus Latitude'>
+          <img class='col-md-6 col-sm-3 float-left mt-md-4' src='./visualizations/Fig3.png' alt='Visualization of Cloudiness versus Latitude'>
+          <img class='col-md-6 col-sm-3 float-right mt-md-4' src='./visualizations/Fig4.png' alt='Visualization of Wind Speed versus Latitude'>-->
+          
+          <div class="col-md-6 col-sm-3 float-left mt-md-4">
+            <div class="hovereffect" style="box-shadow: 2px 2px 5px">
+                <img class="img-responsive col-md-12" src="../assets/Fig1.png" alt="">
+                <div class="overlay">
+                  <a href="../visualizations/temp.html">
+                   <h2>vs Temp</h2>
+                  </a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-3 float-left mt-md-4">
+            <div class="hovereffect">
+                <img class="img-responsive col-md-12" src="../assets/Fig2.png" alt="">
+                <div class="overlay">
+                  <a href="../visualizations/hum.html">
+                   <h2>vs Humidity</h2>
+                  </a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-3 float-left mt-md-4">
+            <div class="hovereffect">
+                <img class="img-responsive col-md-12" src="../assets/Fig3.png" alt="">
+                <div class="overlay">
+                  <a href="../visualizations/clouds.html">
+                   <h2>vs Clouds</h2>
+                  </a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-3 float-left mt-md-4">
+            <div class="hovereffect">
+                <img class="img-responsive col-md-12" src="../assets/Fig4.png" alt="">
+                <div class="overlay">
+                  <a href="../visualizations/wind.html">
+                   <h2>vs Wind</h2>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
